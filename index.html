@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html >
-<!--From https://codepen.io/frytyler/pen/EGdtg-->
 <head>
     <meta charset="UTF-8">
     <title>ML Deployment using Heroku</title>
@@ -15,22 +14,22 @@
         <h1>DPS Challenge</h1>
         <form action="{{ url_for('predict')}}"method="post">
 		<br>
-		<label for="education">Category</label>
-    		<select id="education" name="education" required="required">
+		<label for="Category">Category</label>
+    		<select id="Category" name="Category" required="required">
       			<option value="0">Alkoholunfälle</option>
       			<option value="1">Fluchtunfälle</option>
 		      	<option value="2">Verkehrsunfälle</option>
     		</select>
     		<br>
-    		<label for="marital-status">Type</label>
-    		<select id="marital-status" name="marital-status" required="required">
+    		<label for="Type">Type</label>
+    		<select id="Type" name="Type" required="required">
       			<option value="0">insgesamt</option>
       			<option value="1">Verletzte und Getötete</option>
       			<option value="2">mit Personenschäden</option>
     		</select>
     		<br>
-		<label for="occupation">Year</label>
-    		<select id="occupation" name="occupation" required="required">
+		<label for="Year">Year</label>
+    		<select id="Year" name="Year" required="required">
       			<option value="0">2000</option>
 				<option value="1">2001</option>
       			<option value="2">2002</option>
@@ -55,8 +54,8 @@
 				<option value="21">2022</option>
     		</select>
     		<br>
-    		<label for="relationship">Month</label>
-    		<select id="relationship" name="relationship" required="required">
+    		<label for="Month">Month</label>
+    		<select id="Month" name="Month" required="required">
       			<option value="0">01</option>
       			<option value="1">02</option>
       			<option value="2">03</option>
