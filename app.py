@@ -13,10 +13,12 @@ def home():
 
 @app.route('/predict',methods=['POST'])
 def predict():
-    feature_list = request.form.to_dict()
-    feature_list = list(feature_list.values())
-    feature_list = list(map(int, feature_list))
-    final_features = np.array(feature_list).reshape(1, 12) 
+    category = int(request.form.get('Category'))
+    type1 = int(request.form.get('Type'))
+    year = int(request.form.get('Year'))
+    month = int(request.form.get('Month'))
+    features = [[category, type1, year, month]]
+    
     
     prediction = model.predict(final_features)
     output = int(prediction[0])
