@@ -20,7 +20,7 @@ def predict():
     features = [[category, type1, year, month]]
     
     
-    prediction = model.predict(final_features)
+    prediction = model.predict(features)
     output = int(prediction[0])
     text = output
 
