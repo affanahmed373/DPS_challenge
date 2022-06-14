@@ -5,7 +5,7 @@ from sklearn import preprocessing
 import pickle
 
 app = Flask(__name__)
-model = pickle.load(open('model.pkl', 'rb'))
+model = pickle.load(open('trained_model_NB.pkl', 'rb'))
 
 @app.route('/')
 def home():
@@ -20,12 +20,9 @@ def predict():
     
     prediction = model.predict(final_features)
     output = int(prediction[0])
-    if output == 1:
-        text = ">50K"
-    else:
-        text = "<=50K"
+    text = output
 
-    return render_template('index.html', prediction_text='Employee Income is {}'.format(text))
+    return render_template('index.html', prediction_text='#of Accidents predicted are {}'.format(text))
 
 
 if __name__ == "__main__":
