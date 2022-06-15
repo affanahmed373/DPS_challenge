@@ -15,21 +15,21 @@
         <form action="{{ url_for('predict')}}"method="post">
 		<br>
 		<label for="Category">Category</label>
-    		<select id="Category" name="Category" required="required">
+    		<select id="category" name="Category" required="required">
       			<option value="0">Alkoholunfälle</option>
       			<option value="1">Fluchtunfälle</option>
 		      	<option value="2">Verkehrsunfälle</option>
     		</select>
     		<br>
     		<label for="Type">Type</label>
-    		<select id="Type" name="Type" required="required">
+    		<select id="type" name="Type" required="required">
       			<option value="0">insgesamt</option>
       			<option value="1">Verletzte und Getötete</option>
       			<option value="2">mit Personenschäden</option>
     		</select>
     		<br>
 		<label for="Year">Year</label>
-    		<select id="Year" name="Year" required="required">
+    		<select id="year" name="Year" required="required">
       			<option value="0">2000</option>
 				<option value="1">2001</option>
       			<option value="2">2002</option>
@@ -55,7 +55,7 @@
     		</select>
     		<br>
     		<label for="Month">Month</label>
-    		<select id="Month" name="Month" required="required">
+    		<select id="month" name="Month" required="required">
       			<option value="0">01</option>
       			<option value="1">02</option>
       			<option value="2">03</option>

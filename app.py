@@ -13,10 +13,10 @@ def home():
 
 @app.route('/predict',methods=['POST'])
 def predict():
-    category = int(request.form.get('Category'))
-    type1 = int(request.form.get('Type'))
-    year = int(request.form.get('Year'))
-    month = int(request.form.get('Month'))
+    category = int(request.form.get('category'))
+    type1 = int(request.form.get('type'))
+    year = int(request.form.get('year'))
+    month = int(request.form.get('month'))
     features = [[category, type1, year, month]]
     
     
