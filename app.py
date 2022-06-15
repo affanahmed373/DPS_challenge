@@ -38,7 +38,9 @@ def apiPredict():
     if type(year) != int or month not in range(1, 13):
         return {"Faulty Input"}, 400
     else:
-        features = [[year, month]]
+        category = 0
+        type1 = 0
+        features = [[category, type1, year, month]]
         prediction = int(model.predict(features)[0])
         return {'prediction': prediction}
 if __name__ == "__main__":
