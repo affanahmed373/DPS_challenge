@@ -13,11 +13,9 @@ def home():
 
 @app.route('/predict',methods=['POST'])
 def predict():
-    category = int(request.form.get('category'))
-    type1 = int(request.form.get('type'))
     year = int(request.form.get('year'))
     month = int(request.form.get('month'))
-    features = [[category, type1, year, month]]
+    features = [[year, month]]
     
     
     prediction = model.predict(features)
@@ -38,9 +36,7 @@ def apiPredict():
     if type(year) != int or month not in range(1, 13):
         return {"Faulty Input"}, 400
     else:
-        category = 0
-        type1 = 0
-        features = [[category, type1, year, month]]
+        features = [[year, month]]
         prediction = int(model.predict(features)[0])
         return {'prediction': prediction}
 if __name__ == "__main__":
